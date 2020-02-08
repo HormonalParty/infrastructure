@@ -1,0 +1,30 @@
+name: Terraform
+on: [push, pull_request]
+
+jobs:
+  lint:
+    name: Lint
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v2
+
+      # Install latest Terraform manually as Docker-based GitHub Actions are
+      # slow due to lack of caching.
+      - name: install terraform
+        working-directory: ./terraform
+        run: |
+          curl -LO https://raw.githubusercontent.com/robertpeteuil/terraform-installer/f4f46c459bd75971a843373a2aa349f728534230/terraform-install.sh
+          chmod +x terraform-install.sh
+          ./terraform-install.sh -a -i 0.12.20
+
+      - name: terraform init
+        run: |
+          terraform init
+
+      - name: tflint
+        uses: reviewdog/action-tflint@master
+        with:
+          github_token: ${{ secrets.github_token }}
+          reporter: github-pr-review
+          flags: "--deep"
