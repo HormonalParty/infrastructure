@@ -12,6 +12,6 @@ terraform {
 }
 
 provider "dnsimple" {
-  token   = "${var.dnsimple_token}"
-  account = "${var.dnsimple_account}"
+  token   = var.dnsimple_token
+  account = var.dnsimple_account
 }
