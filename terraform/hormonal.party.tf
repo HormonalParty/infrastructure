@@ -30,9 +30,9 @@ resource "dnsimple_record" "grafana_svc_hormonal_party_a" {
   ttl    = 3600
 }
 
-resource "dnsimple_record" "homeassistant_hormonal_party_aaaa" {
+resource "dnsimple_record" "grafana_svc_hormonal_party_aaaa" {
   domain = "hormonal.party"
-  name   = "homeassistant"
+  name   = "grafana.svc"
   value  = "2a01:4f8:110:437b::1"
   type   = "AAAA"
   ttl    = 3600
@@ -41,15 +41,7 @@ resource "dnsimple_record" "homeassistant_hormonal_party_aaaa" {
 resource "dnsimple_record" "homeassistant_hormonal_party_a" {
   domain = "hormonal.party"
   name   = "homeassistant"
-  value  = "178.63.8.90"
+  value  = "90.187.234.21"
   type   = "A"
-  ttl    = 3600
-}
-
-resource "dnsimple_record" "grafana_svc_hormonal_party_aaaa" {
-  domain = "hormonal.party"
-  name   = "grafana.svc"
-  value  = "2a01:4f8:110:437b::1"
-  type   = "AAAA"
   ttl    = 3600
 }
