@@ -45,3 +45,11 @@ resource "dnsimple_record" "homeassistant_hormonal_party_a" {
   type   = "A"
   ttl    = 3600
 }
+
+resource "dnsimple_record" "goproxy_hormonal_party_a" {
+  domain = "hormonal.party"
+  name   = "goproxy"
+  value  = "90.187.234.21"
+  type   = "A"
+  ttl    = 3600
+}
