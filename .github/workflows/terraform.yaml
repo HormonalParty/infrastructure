@@ -16,7 +16,7 @@ jobs:
         run: |
           curl -LO https://raw.githubusercontent.com/robertpeteuil/terraform-installer/f4f46c459bd75971a843373a2aa349f728534230/terraform-install.sh
           chmod +x terraform-install.sh
-          ./terraform-install.sh -a -i 0.13.7
+          ./terraform-install.sh -a -i 1.0.5
 
       - name: terraform init
         run: |
