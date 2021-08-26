@@ -1,5 +1,11 @@
 terraform {
-  required_version = "~> 0.12.18"
+  required_version = "~> 0.13.7"
+
+  required_providers {
+    dnsimple = {
+      source = "dnsimple/dnsimple"
+    }
+  }
 
   backend "remote" {
     hostname     = "app.terraform.io"
