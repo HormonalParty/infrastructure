@@ -1,5 +1,5 @@
 terraform {
-  required_version = "~> 1.0.5"
+  required_version = "~> 1"
 
   required_providers {
     dnsimple = {
@@ -7,8 +7,7 @@ terraform {
     }
   }
 
-  backend "remote" {
-    hostname     = "app.terraform.io"
+  cloud {
     organization = "hormonalparty"
 
     workspaces {
