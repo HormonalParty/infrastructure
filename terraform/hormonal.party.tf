@@ -37,7 +37,7 @@ resource "dnsimple_record" "grafana_hormonal_party_a" {
 resource "dnsimple_record" "homeassistant_hormonal_party_a" {
   domain = "hormonal.party"
   name   = "homeassistant"
-  value  = local.home_v4
+  value  = "192.168.2.132"
   type   = "A"
   ttl    = 3600
 }
