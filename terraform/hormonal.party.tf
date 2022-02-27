@@ -26,6 +26,22 @@ resource "dnsimple_zone_record" "berlin_infra_hormonal_party_aaaa" {
   ttl       = 3600
 }
 
+resource "dnsimple_zone_record" "lisbon_infra_hormonal_party_a" {
+  zone_name = "hormonal.party"
+  name      = "lisbon.infra"
+  value     = "65.108.68.203"
+  type      = "A"
+  ttl       = 3600
+}
+
+resource "dnsimple_zone_record" "lisbon_infra_hormonal_party_aaaa" {
+  zone_name = "hormonal.party"
+  name      = "lisbon.infra"
+  value     = "2a01:4f9:6b:44da::1"
+  type      = "AAAA"
+  ttl       = 3600
+}
+
 resource "dnsimple_zone_record" "grafana_hormonal_party_a" {
   zone_name = "hormonal.party"
   name      = "grafana"
