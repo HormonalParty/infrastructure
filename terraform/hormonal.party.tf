@@ -10,6 +10,14 @@ resource "dnsimple_zone_record" "home_hormonal_party" {
   ttl       = 3600
 }
 
+resource "dnsimple_zone_record" "plex_hormonal_party" {
+  zone_name = "hormonal.party"
+  name      = "plex"
+  value     = dnsimple_zone_record.home_hormonal_party.qualified_name
+  type      = "CNAME"
+  ttl       = 3600
+}
+
 resource "dnsimple_zone_record" "berlin_infra_hormonal_party_a" {
   zone_name = "hormonal.party"
   name      = "berlin.infra"
