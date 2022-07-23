@@ -1,5 +1,5 @@
 locals {
-  home_v4 = "80.137.66.243"
+  home_v4 = "79.244.147.146"
 }
 
 resource "dnsimple_zone_record" "home_hormonal_party" {
