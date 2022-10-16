@@ -17,20 +17,21 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      - uses: hashicorp/setup-terraform@v1
-      - uses: terraform-linters/setup-tflint@v1
-      - uses: actions/cache@v2
+      - uses: actions/cache@v3
         with:
           path: ~/.tflint.d/plugins
           key: tflint-${{ hashFiles('terraform/.tflint.hcl') }}
 
-      - name: Terraform fmt
+      - uses: hashicorp/setup-terraform@v2
+      - uses: terraform-linters/setup-tflint@v2
+
+      - name: terraform fmt
         run: terraform fmt -check
 
-      - name: Terraform init
+      - name: terraform init
         run: terraform init -backend=false
 
-      - name: Terraform validate
+      - name: terraform validate
         run: terraform validate -no-color
 
       - name: tflint init
