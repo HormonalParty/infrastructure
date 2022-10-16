@@ -3,7 +3,8 @@ terraform {
 
   required_providers {
     dnsimple = {
-      source = "dnsimple/dnsimple"
+      source  = "dnsimple/dnsimple"
+      version = "~> 0.14.0"
     }
   }
 
