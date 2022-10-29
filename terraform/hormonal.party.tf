@@ -66,3 +66,11 @@ resource "dnsimple_zone_record" "homeassistant_hormonal_party_a" {
   type      = "A"
   ttl       = 3600
 }
+
+resource "dnsimple_zone_record" "tsort_infra_hormonal_party_a" {
+  zone_name = "hormonal.party"
+  name      = "tsort.infra"
+  value     = "158.101.197.162"
+  type      = "A"
+  ttl       = 3600
+}
