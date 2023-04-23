@@ -1,6 +1,6 @@
 locals {
   home_v4           = "79.244.145.91"
-  sintra_tailnet_v4 = "100.94.89.26"
+  sintra_tailnet_v4 = "100.119.159.53"
 }
 
 resource "dnsimple_zone_record" "home_hormonal_party" {
