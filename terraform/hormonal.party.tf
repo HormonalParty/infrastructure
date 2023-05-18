@@ -27,22 +27,6 @@ resource "dnsimple_zone_record" "goproxy_tailnet_hormonal_party" {
   ttl       = 3600
 }
 
-resource "dnsimple_zone_record" "berlin_infra_hormonal_party_a" {
-  zone_name = "hormonal.party"
-  name      = "berlin.infra"
-  value     = "178.63.8.90"
-  type      = "A"
-  ttl       = 3600
-}
-
-resource "dnsimple_zone_record" "berlin_infra_hormonal_party_aaaa" {
-  zone_name = "hormonal.party"
-  name      = "berlin.infra"
-  value     = "2a01:4f8:110:437b::1"
-  type      = "AAAA"
-  ttl       = 3600
-}
-
 resource "dnsimple_zone_record" "lisbon_infra_hormonal_party_a" {
   zone_name = "hormonal.party"
   name      = "lisbon.infra"
