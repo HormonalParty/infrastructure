@@ -43,6 +43,14 @@ resource "dnsimple_zone_record" "lisbon_infra_hormonal_party_aaaa" {
   ttl       = 3600
 }
 
+resource "dnsimple_zone_record" "git_hormonal_party_cname" {
+  zone_name = "hormonal.party"
+  name      = "git"
+  value     = "lisbon.infra.hormonal.party"
+  type      = "CNAME"
+  ttl       = 3600
+}
+
 resource "dnsimple_zone_record" "homeassistant_hormonal_party_a" {
   zone_name = "hormonal.party"
   name      = "homeassistant"
