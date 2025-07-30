@@ -38,7 +38,7 @@ resource "dnsimple_zone_record" "lisbon_infra_hormonal_party_a" {
 resource "dnsimple_zone_record" "lisbon_infra_hormonal_party_aaaa" {
   zone_name = "hormonal.party"
   name      = "lisbon.infra"
-  value     = "2a01:4f9:6b:44da::1"
+  value     = "2a01:4f9:6b:44da::2"
   type      = "AAAA"
   ttl       = 3600
 }
